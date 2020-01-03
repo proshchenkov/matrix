@@ -17,6 +17,8 @@ type
     Button2: TButton;
     Panel1: TPanel;
     SpinEdit1: TSpinEdit;
+    Splitter1: TSplitter;
+    Splitter2: TSplitter;
     StringGrid1: TStringGrid;
     StringGrid2: TStringGrid;
     StringGrid3: TStringGrid;
