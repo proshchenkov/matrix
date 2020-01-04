@@ -15,6 +15,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     Panel1: TPanel;
     SpinEdit1: TSpinEdit;
     Splitter1: TSplitter;
@@ -24,6 +25,7 @@ type
     StringGrid3: TStringGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure SpinEdit1Change(Sender: TObject);
   private
 
@@ -72,6 +74,17 @@ begin
     begin
       StringGrid3.Cells[i, j] :=
         (StringGrid1.Cells[i, j].ToInteger + StringGrid2.Cells[i, j].ToInteger).ToString;
+    end;
+  end;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  for i := 0 to SpinEdit1.Value - 1 do
+  begin
+    for j := 0 to SpinEdit1.Value - 1 do
+    begin
+      StringGrid3.Cells[i, j] := StringGrid1.Cells[j, i];
     end;
   end;
 end;
